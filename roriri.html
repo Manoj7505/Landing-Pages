@@ -1,0 +1,330 @@
+<html>
+
+<head>
+    <title>Roriri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-image: url("rori.jpg");
+            background-repeat: repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ror {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            box-shadow: 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .ror h1 {
+            font-size: 50px;
+            font-family: cursive;
+        }
+
+        .ror button {
+            width: 150;
+            height: 50;
+            font-family: serif;
+            font-size: 20px;
+            border-radius: 10px;
+            margin-right: 40px;
+            cursor: pointer;
+        }
+
+        .image {
+            width: 40;
+            height: 40;
+
+        }
+
+        .inter {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            margin-top: 50px;
+        }
+
+        .Training {
+            padding: 20px;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .Training h1 {
+            margin-left: 60px;
+            margin-top: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .Training p {
+            margin-top: 50px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 60px;
+        }
+
+        .spa {
+            margin-left: 0px;
+        }
+
+        .fund {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px;
+
+        }
+
+        .bolt {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+        }
+
+        .bolt:hover {
+            transform: translateY(-5px);
+        }
+
+        .bolt h2 {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .bolt p {
+            text-align: justify;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        footer {
+            color: white;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1100px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+
+            width: 220px;
+            margin: 10px 20px;
+        }
+
+        .footer-column h3 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .footer-column p {
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .footer-column strong {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            font-size: 28px;
+        }
+
+        .social-icons a:hover {
+            cursor: pointer;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .footer-column ul li a {
+
+            text-decoration: none;
+            font-weight: 300;
+
+        }
+
+        .footer-column ul li a:hover {
+            color: #fff;
+        }
+
+        .Reserved {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .soft {
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ror">
+        <h1><img src="R.png" class="image">Roriri Software Solution</h1>
+        <button onclick="getstart()" id="Start">Get Start</button>
+    </div>
+    <div class="inter">
+        <div class="Training">
+            <h1>We can do Training,<br><span class="spa">Courses & Internship</span></h1>
+            <p>We are Provide to Course Members, We are Hiring to Employee</p>
+            <!-- <input type="text" placeholder="What do you Want..."><button>Search</button> -->
+        </div>
+        <div>
+            <img src="rori2.jpg" alt="" height="300" width="500" class="soft">
+        </div>
+    </div>
+    <div class="fund">
+        <div class="bolt" id="founder">
+            <h2>Founder</h2><br>
+            <p>Identifies a problem or opportunity in the market. Develops a vision or product idea. Sets the long-term
+                direction for the company.
+                Finds early customers or users. Builds partnerships with other companies or service providers. Helps
+                define go-to-market strategies. Shifts from hands-on tasks to strategic leadership
+            </p>
+        </div>
+        <div class="bolt" id="ceo">
+            <h2>CEO</h2><br>
+            <p>Defines the long-term mission and strategic goals. Manages senior leaders. Hires, evaluates, and mentors
+                top-level managers.
+                Aligns the team around a clear roadmap.Approves large investments, product pivots, and hiring plans.
+                Signs off on acquisitions, partnerships, or company expansions. Balances risks and returns.
+            </p>
+        </div>
+        <div class="bolt" id="md">
+            <h2>MD</h2><br>
+            <p>Takes full responsibility for running the business. Drives execution of the company’s strategy, goals,
+                and vision. Ensures day-to-day operations are aligned with long-term objectives. Works with the CFO to
+                manage the company budget, profitability, and cash flow. Builds trust and maintains transparency.</p>
+        </div>
+        <div class="bolt" id="manager">
+            <h2>Manager</h2><br>
+            <p>Manages a team of developers, designers, testers, or other specialists. Assigns tasks, sets goals, and
+                tracks performance. Motivates the team and resolves conflicts. Acts as a bridge between technical teams
+                and business teams. Reports updates to upper management. Identifies risks to delivery or performance
+                early</p>
+        </div>
+        <div class="bolt" id="hr">
+            <h2>HR</h2><br>
+            <p>Writes job descriptions for roles like software engineers, testers, designers. Conducts initial
+                screenings, schedules interviews, and manages the hiring process. managers for technical interviews.
+                Manages salaries, bonuses, tax-related work. Handles insurance, leaves, holidays. Time and accurate
+                salary payments.</p>
+        </div>
+        <div class="bolt" id="teamleader">
+            <h2>Team Leader</h2><br>
+            <p>Assigns tasks to team members based on skill and work. Keeps the team organized and motivated. Reviews
+                code, provides technical guidance, and best practices. Works closely with Project Managers to plan and
+                deliver tasks on time. Identifies high performers and areas for improvement. Solves technical issues and
+                supports junior developers.</p>
+        </div>
+        <div class="bolt" id="employee">
+            <h2>Employee</h2><br>
+            <p>Work closely with team members (developers, testers, designers, etc.). Attend team meetings, stand-ups,
+                sprint planning, etc. Communicate progress, blockers, and updates. Write clean, secure, maintainable
+                code or create well-tested systems. Ensure work is delivered on time and meets specifications. Follow
+                coding standards or design guidelines.</p>
+        </div>
+        <div class="bolt" id="coursemember">
+            <h2>Course Member</h2><br>
+            <p>Participate in live or recorded classes, online or offline. Learn theoretical concepts and practical
+                applications. Write code or use IT tools based on what they’re learning. Complete assignments, labs, or
+                exercises. Work on real-world projects. Some course members aim for certifications. Others prepare for
+                job interviews, internships, or entry-level IT roles.</p>
+        </div>
+        <div class="bolt" id="internship">
+            <h2>InternShip Member</h2><br>
+            <p>Help full-time employees with actual coding, testing, or documentation. Work on small modules or support
+                tasks. Shadow senior developers or team leads to learn the workflow. Work on assigned mini-projects or
+                tasks that align with the team's work. Learn the workflow of an IT company: from idea to release.
+                Experience what a real tech job is like.</p>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Head Office</h3>
+                <p>RORIRI IT PARK, <br> NALLANATHAPURAM, KALAKAD</p>
+                <strong>Follow Us:</strong>
+                <div class="social-icons">
+                    <a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li>E-Brochure</li>
+                    <li>Careers</li>
+                    <li>Internship</li>
+                    <li>Products</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li>ERP Solutions</li>
+                    <li>Web Development</li>
+                    <li>Mobile App Development</li>
+                    <li>Digital Marketing</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Reserved">@ 2025 Roriri Software Solution.All Rights Reserved.</p>
+    </footer>
+    <script>
+        function getstart() {
+            window.location.href = "sign.html";
+        }
+    </script>
+</body>
+
+</html>

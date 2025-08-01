@@ -1,0 +1,200 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url("wait.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 5px;
+            font-family: cursive;
+            border: 0.1px;
+            color: white;
+            font-size: 25px;
+        }
+
+
+        nav {
+            display: flex;
+            column-gap: 20px;
+            cursor: pointer;
+        }
+
+        nav p {
+            margin-right: 50px;
+        }
+
+
+
+
+
+        .sign {
+            margin-top: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.25);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            width: 350px;
+            color: #000;
+            cursor: default;
+        }
+
+        .sign input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background-color: lightpink;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: cursive;
+            font-size: 14px;
+            color: #333;
+        }
+
+        #Role {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background-color: lightpink;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: cursive;
+            font-size: 14px;
+            color: #333;
+        }
+
+
+        .sign input:focus,
+        #Role:focus {
+            outline: none;
+            border: 1px solid #f06292;
+            box-shadow: 0 0 8px #f06292;
+        }
+
+        #sub {
+            width: 100%;
+            padding: 12px;
+            background-color: #f06292;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: cursive;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #sub:hover {
+            background-color: #ec407a;
+        }
+
+        .output {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            margin-top: 15px;
+        }
+
+        .image {
+            width: 35;
+            height: 35;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><img src="R.png" class="image">Roriri Software Solution</h1>
+        <!-- <nav>
+            <a href="coffee.html" style="text-decoration: none;color:white;">
+              <p>Home</p>
+            </a>
+            <a href="about.html" style="text-decoration: none;color: white;">
+                <p>About</p>
+            </a>
+            <a href="careers.html" style="text-decoration: none;color: white;">
+                <p>Our Courses</p>
+            </a>
+            <a href="service.html" style="text-decoration: none;color: white;">
+                <p>Service</p>
+            </a>
+        </nav> -->
+    </header>
+    <div class="sign">
+        Name: <input type="text" id="name" placeholder="...."><br>
+        Role: <select name="Role" id="Role">
+            <option value="founder">Founder</option>
+            <option value="ceo">CEO</option>
+            <option value="md">MD</option>
+            <option value="manager">Manager</option>
+            <option value="hr">HR</option>
+            <option value="teamleader">Team Leader</option>
+            <option value="employee">Employee</option>
+            <option value="coursemember">Course Member</option>
+            <option value="internship">InternShip Member</option>
+        </select><br>
+        Email : <input type="email" id="email" placeholder="enter email"><br>
+        Password : <input type="password" id="password" placeholder="enter password"><br>
+        Confirm Password: <input type="password" id="confirm" placeholder="enter confirm password"><br>
+        <button onclick="submits()" id="sub">Submit</button>
+        <p id="output" class="output"></p>
+    </div>
+    <script>
+        function submits() {
+            const name = document.getElementById("name").value.trim();
+            const role = document.getElementById("Role").value;
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const confirm = document.getElementById("confirm").value;
+            const output = document.getElementById("output");
+
+
+            output.textContent = '';
+            output.classList.remove('error');
+            if (!name || !role || !email || !password || !confirm) {
+                output.textContent = "Please fill out all fields.";
+                output.classList.add("error");
+                return;
+            }
+
+            if (password !== confirm) {
+                output.textContent = "Passwords do not match.";
+                output.classList.add("error");
+                return;
+            }
+            localStorage.setItem("loggedRole", role);
+
+            window.location.href = "information.html";
+
+            output.textContent = " Successfully logged in as " + role.charAt(0).toUpperCase() + role.slice(1);
+            output.classList.remove("error");
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
